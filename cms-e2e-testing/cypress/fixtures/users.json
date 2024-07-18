@@ -1,0 +1,23 @@
+[
+    {
+      "email": "amber.yuan+cms@student.com",
+      "password": "123123123",
+      "role": "admin",
+      "fullName": "Automation Test",
+      "state": "active"
+    },
+    {
+        "email": "amber.yuan+cms@student.com",
+        "password": "123123123",
+        "role": "BD",
+        "fullName": "Automation Test",
+        "state": "active"
+      },
+      {
+        "email": "tyra.huang+cms@student.com",
+        "password": "11111111",
+        "role": "multi-role",
+        "fullName": "Automation Test",
+        "state": "active"
+      }
+  ]

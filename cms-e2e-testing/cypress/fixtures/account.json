@@ -1,0 +1,8 @@
+{
+  "firstName": "Automation",
+  "lastName": "Test",
+  "userRole": "Admin",
+  "landlord": "Automation Test",
+  "cmsEmail": "automation.test+cms01@student.com",
+  "dashboardEmail": "automation.test+dashboard@student.com"
+}

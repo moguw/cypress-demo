@@ -1,0 +1,36 @@
+{
+  "name": "cms-e2e-testing",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "11.5.1",
+    "@cypress/browserify-preprocessor": "^3.0.2",
+    "@types/cypress-cucumber-preprocessor": "^4.0.1",
+    "cypress": "^12.13.0",
+    "typescript": "^4.7.4"
+  },
+  "scripts": {
+    "debug_stage": "cypress open --e2e --browser=chrome\n",
+    "debug_uat1": "cypress open --e2e --config-file cypress.config.uat1.ts --browser=chrome\n",
+    "debug_uat2": "cypress open --e2e --config-file cypress.config.uat2.ts --browser=chrome\n",
+    "debug_uat3": "cypress open --e2e --config-file cypress.config.uat3.ts --browser=chrome\n",
+    "run_stage": "cypress run --e2e --browser=chrome --headless\n",
+    "run_uat1": "cypress run --e2e --config-file cypress.config.uat1.ts --browser=chrome --headless\n",
+    "run_uat2": "cypress run --e2e --config-file cypress.config.uat2.ts --browser=chrome --headless\n",
+    "run_uat3": "cypress run --e2e --config-file cypress.config.uat3.ts --browser=chrome --headless\n",
+    "run_debug": "cypress run --e2e --config-file cypress.config.uat3.ts --browser=chrome --headless --spec 'cypress/features/login.feature'\n"
+  },
+  "cypress-cucumber-preprocessor": {
+    "json": {
+      "enabled": true,
+      "output": "cucumber-report.json",
+      "formatter": "/usr/local/bin/cucumber-json-formatter"
+    },
+    "nonGlobalStepDefinitions": false,
+    "stepDefinitions": [
+      "[filepath]/*.steps.ts",
+      "cypress/features/common/*.steps.ts"
+    ]
+  }
+}
